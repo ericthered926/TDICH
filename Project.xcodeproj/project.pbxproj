@@ -16,11 +16,6 @@
 		C696CE661E2FFDAD003C3660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C696CE651E2FFDAD003C3660 /* Assets.xcassets */; };
 		C696CE691E2FFDAD003C3660 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C696CE671E2FFDAD003C3660 /* LaunchScreen.storyboard */; };
 		C696CE741E2FFDAE003C3660 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696CE731E2FFDAE003C3660 /* ProjectTests.swift */; };
-		C696CE831E300AE7003C3660 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696CE7E1E300AE7003C3660 /* FirstTableViewController.swift */; };
-		C696CE841E300AE7003C3660 /* SecondTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696CE7F1E300AE7003C3660 /* SecondTable.swift */; };
-		C696CE851E300AE7003C3660 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696CE801E300AE7003C3660 /* SecondTableViewController.swift */; };
-		C696CE861E300AE7003C3660 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696CE811E300AE7003C3660 /* ThirdView.swift */; };
-		C696CE871E300AE7003C3660 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696CE821E300AE7003C3660 /* ViewController.swift */; };
 		C6DCF2CA1E3159E00008A3A8 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = C6DCF2C91E3159E00008A3A8 /* Menu.png */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +42,6 @@
 		C696CE6F1E2FFDAE003C3660 /* ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696CE731E2FFDAE003C3660 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
 		C696CE751E2FFDAE003C3660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C696CE7E1E300AE7003C3660 /* FirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
-		C696CE7F1E300AE7003C3660 /* SecondTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTable.swift; sourceTree = "<group>"; };
-		C696CE801E300AE7003C3660 /* SecondTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
-		C696CE811E300AE7003C3660 /* ThirdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
-		C696CE821E300AE7003C3660 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6DCF2C91E3159E00008A3A8 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
 		DBC382411B940DAE3454567E /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		E668E3E99E50F3ACB44A4E8A /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,12 +111,7 @@
 				C696CE5E1E2FFDAD003C3660 /* AppDelegate.swift */,
 				C696CE601E2FFDAD003C3660 /* TodayView.swift */,
 				C696CE621E2FFDAD003C3660 /* Main.storyboard */,
-				C696CE7E1E300AE7003C3660 /* FirstTableViewController.swift */,
-				C696CE7F1E300AE7003C3660 /* SecondTable.swift */,
-				C696CE801E300AE7003C3660 /* SecondTableViewController.swift */,
-				C696CE811E300AE7003C3660 /* ThirdView.swift */,
 				C6DCF2C91E3159E00008A3A8 /* Menu.png */,
-				C696CE821E300AE7003C3660 /* ViewController.swift */,
 				C696CE651E2FFDAD003C3660 /* Assets.xcassets */,
 				C696CE671E2FFDAD003C3660 /* LaunchScreen.storyboard */,
 				C696CE6A1E2FFDAD003C3660 /* Info.plist */,
@@ -302,13 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C696CE841E300AE7003C3660 /* SecondTable.swift in Sources */,
 				C696CE611E2FFDAD003C3660 /* TodayView.swift in Sources */,
-				C696CE851E300AE7003C3660 /* SecondTableViewController.swift in Sources */,
 				C696CE5F1E2FFDAD003C3660 /* AppDelegate.swift in Sources */,
-				C696CE871E300AE7003C3660 /* ViewController.swift in Sources */,
-				C696CE861E300AE7003C3660 /* ThirdView.swift in Sources */,
-				C696CE831E300AE7003C3660 /* FirstTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
