@@ -16,7 +16,9 @@
 		C696CE661E2FFDAD003C3660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C696CE651E2FFDAD003C3660 /* Assets.xcassets */; };
 		C696CE691E2FFDAD003C3660 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C696CE671E2FFDAD003C3660 /* LaunchScreen.storyboard */; };
 		C696CE741E2FFDAE003C3660 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696CE731E2FFDAE003C3660 /* ProjectTests.swift */; };
-		C6DCF2CA1E3159E00008A3A8 /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = C6DCF2C91E3159E00008A3A8 /* Menu.png */; };
+		C6D9110F1E5EB7FA005A89AD /* iPhone 7.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D9110E1E5EB7FA005A89AD /* iPhone 7.png */; };
+		C6D911111E5EB882005A89AD /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D911101E5EB882005A89AD /* Menu.png */; };
+		C6F7B7931E68DC5F00EF8ED7 /* Slice 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C6F7B7921E68DC5F00EF8ED7 /* Slice 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,9 @@
 		C696CE6F1E2FFDAE003C3660 /* ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696CE731E2FFDAE003C3660 /* ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
 		C696CE751E2FFDAE003C3660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6DCF2C91E3159E00008A3A8 /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
+		C6D9110E1E5EB7FA005A89AD /* iPhone 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone 7.png"; sourceTree = "<group>"; };
+		C6D911101E5EB882005A89AD /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
+		C6F7B7921E68DC5F00EF8ED7 /* Slice 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slice 1.png"; sourceTree = "<group>"; };
 		DBC382411B940DAE3454567E /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		E668E3E99E50F3ACB44A4E8A /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 		FB3DAEB02D738A40CAF6662B /* Pods_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,8 +114,10 @@
 			children = (
 				C696CE5E1E2FFDAD003C3660 /* AppDelegate.swift */,
 				C696CE601E2FFDAD003C3660 /* TodayView.swift */,
+				C6D9110E1E5EB7FA005A89AD /* iPhone 7.png */,
 				C696CE621E2FFDAD003C3660 /* Main.storyboard */,
-				C6DCF2C91E3159E00008A3A8 /* Menu.png */,
+				C6D911101E5EB882005A89AD /* Menu.png */,
+				C6F7B7921E68DC5F00EF8ED7 /* Slice 1.png */,
 				C696CE651E2FFDAD003C3660 /* Assets.xcassets */,
 				C696CE671E2FFDAD003C3660 /* LaunchScreen.storyboard */,
 				C696CE6A1E2FFDAD003C3660 /* Info.plist */,
@@ -216,11 +222,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6DCF2CA1E3159E00008A3A8 /* Menu.png in Resources */,
+				C6D911111E5EB882005A89AD /* Menu.png in Resources */,
 				C696CE691E2FFDAD003C3660 /* LaunchScreen.storyboard in Resources */,
 				C66933521E37E0D5006CB802 /* GoogleService-Info.plist in Resources */,
 				C696CE661E2FFDAD003C3660 /* Assets.xcassets in Resources */,
+				C6F7B7931E68DC5F00EF8ED7 /* Slice 1.png in Resources */,
 				C696CE641E2FFDAD003C3660 /* Main.storyboard in Resources */,
+				C6D9110F1E5EB7FA005A89AD /* iPhone 7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

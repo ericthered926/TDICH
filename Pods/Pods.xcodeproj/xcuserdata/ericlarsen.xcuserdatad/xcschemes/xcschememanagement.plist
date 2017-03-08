@@ -4,12 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImageSlideshow-ImageSlideshow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ImageSlideshow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E987198F0413C2FD9990E3C0514EF0D</key>
+		<key>00A4B65FE1930CE42D7D447B030F01B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7B1F4427AC328D66FAB0D292FA9C7B81</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EFE4C70245EE2857D336B8B9FA4E825</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7679789D2E3B7195A2535ECAB9B890C</key>
+		<key>D7CBC234FB030A2EB305746812331066</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1B5C04616E0C4D75529B5840B98B930</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,5 +10,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'FirebaseUI/Storage'
 pod 'Firebase/Database'
+pod 'ImageSlideshow'
+pod 'ImageSlideshow/SDWebImage'
+pod 'ImageSlideshow/Alamofire'
 
 end
