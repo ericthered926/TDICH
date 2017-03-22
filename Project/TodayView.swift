@@ -12,6 +12,8 @@ import FirebaseStorage
 import FirebaseStorageUI
 import FirebaseDatabase
 import ImageSlideshow
+import ARNTransitionAnimator
+
 
 
 //This variable references which photo should be loaded
@@ -29,8 +31,8 @@ var URLArray : [String] = []
 
 //These variables allow for the user to navigate the JSON file
 var month = "Dec"
-var day = "31"
-var whichFact = "Dec_31A"
+var day = "5"
+var whichFact = "Dec_5A"
 var whichPhoto = "Photo1"
 let photoOne = "Photo1"
 var dayFactNumber : UInt = 0
@@ -40,6 +42,7 @@ let hotBod = "Body"
 let date = "Date"
 var groupNames = [FIRDataSnapshot]()
 var menuShowing = false
+var dateText : String?
 
 class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
     //View outlets
@@ -49,10 +52,12 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var slideshow: ImageSlideshow!
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    @IBOutlet weak var sideMenuWidth: NSLayoutConstraint!
     
     //Runs on startup
     override func viewDidLoad()
     {
+        getDate()
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
@@ -63,9 +68,12 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
                 URLArray = photoURLArray
                 let arr = photoURLArray.map {SDWebImageSource(urlString: $0 )!}
                 print(arr)
+                let toImg = Foundation.URL(string: URLArray[0])
+                self.imageViewBlur.sd_setImage(with: toImg)
                 self.slideshow.setImageInputs(arr)
             }
         })
+        
         self.slideshow.backgroundColor = UIColor.clear
         self.slideshow.slideshowInterval = 15.0
         self.slideshow.pageControlPosition = PageControlPosition.underScrollView
@@ -96,6 +104,67 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
         return dateArray.count
     }
     
+    func getDate()
+    {
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.month, .day],from: date)
+        let m = components.month
+        if m==1
+        {
+            month="Jan"
+        }
+        else if m==2
+        {
+            month="Feb"
+        }
+        else if m==3
+        {
+            month="Mar"
+        }
+        else if m==4
+        {
+            month="Apr"
+        }
+        else if m==5
+        {
+            month="May"
+        }
+        else if m==6
+        {
+            month="Jun"
+        }
+        else if m==7
+        {
+            month="Jul"
+        }
+        else if m==8
+        {
+            month="Aug"
+        }
+        else if m==9
+        {
+            month="Sep"
+        }
+        else if m==10
+        {
+            month="Oct"
+        }
+        else if m==11
+        {
+            month="Nov"
+        }
+        else if m==12
+        {
+            month="Dec"
+        }
+        var test = components.day!
+        var str : String = "\(test)"
+        day=str
+        whichFact=month+"_"+day+"A"
+        print(whichFact)
+    }
+    
     //fills the labels in the tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -113,24 +182,7 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
-    //Gives the tableView items actions, turns them into buttons basically, and allows for the user to change which fact, along with the respective pictures, that they're looking at
-    /*func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
-        whichFact = dateArray[indexPath.item]
-        print(whichFact)
-        loadAll(completionHandler: { (data:[String]?) -> Void in
-            if let photoURLArray = data
-            {
-                URLArray = photoURLArray
-                let arr = photoURLArray.map {SDWebImageSource(urlString: $0 )!}
-                print(arr)
-                self.slideshow.setImageInputs(arr)
-            }
-        })
-        tablePick.constant = -200
-        UIView.animate(withDuration: 0.3,animations: {self.view.layoutIfNeeded()})
-        menuShowing = !menuShowing
-    }*/
-    
+    //changes the imageviews, text,  etc. when the date fact is changed
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         whichFact = dateArray[indexPath.item]
         print(whichFact)
@@ -140,7 +192,10 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
                 URLArray = photoURLArray
                 let arr = photoURLArray.map {SDWebImageSource(urlString: $0 )!}
                 print(arr)
+                let toImg = Foundation.URL(string: URLArray[0])
+                self.imageViewBlur.sd_setImage(with: toImg)
                 self.slideshow.setImageInputs(arr)
+                self.slideshow.setCurrentPage(1, animated: true)
             }
         })
         tableHeight.constant = 0
@@ -152,6 +207,19 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
     //This has to do with ImageSlideshow, allowing the photo view to be presented fullscreen
     func didTap() {
         slideshow.presentFullScreenController(from: self)
+    }
+    
+    //Allows the user to share, pretty cool
+    @IBAction func shareButton(_ sender: Any) {
+        // set up activity view controller
+        let share = "\n\nDownload the app This Day In Collecting History at -LINK-"
+        var shareText = dateText! + share
+        let textToShare = [ shareText ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     //Allows the user to see what other facts are available for the day
@@ -175,7 +243,8 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
     //Triggers the menu
     @IBAction func menuButton(_ sender: Any)
     {
-        
+        sideMenuWidth.constant = 203
+        UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
     }
     
     //This function retrieves the number of facts for a day, which allows the user to change which day fact they are viewing (that part is not included in this function, for that, refer to tableView accessoryButtonTapped
@@ -234,6 +303,7 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
             let m = snapshot.valueInExportFormat() as? String
             // set the body text view
             self.textView.text = m
+            dateText = m
         })
         databaseRef = database.child(month).child(day).child(whichFact).child(tFolder).child(date)
         databaseRef.observeSingleEvent(of: .value, with: { snapshot in
@@ -277,9 +347,4 @@ class TodayView: UIViewController, UITableViewDataSource, UITableViewDelegate{
             }
         })
     }
-    
-    
-    
-    
 }
-

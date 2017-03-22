@@ -12,6 +12,6 @@ pod 'FirebaseUI/Storage'
 pod 'Firebase/Database'
 pod 'ImageSlideshow'
 pod 'ImageSlideshow/SDWebImage'
-pod 'ImageSlideshow/Alamofire'
+pod 'ARNTransitionAnimator'
 
 end

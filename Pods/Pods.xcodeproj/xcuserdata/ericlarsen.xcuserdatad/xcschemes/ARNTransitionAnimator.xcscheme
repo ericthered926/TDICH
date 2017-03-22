@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '88E9EC28B8B46C3631E6B242B50F4442'
-               BlueprintName = 'Alamofire'
+               BlueprintIdentifier = '1533F149321A5BC3F7398E3A1A1CC6D4'
+               BlueprintName = 'ARNTransitionAnimator'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Alamofire.framework'>
+               BuildableName = 'ARNTransitionAnimator.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
